@@ -1,0 +1,38 @@
+<button mat-raised-button color="primary">teste</button>
+<br><br><br>
+<div>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+    <input name="id" #id="ngModel" ngModel required><br>
+    <span *ngIf="error" style="color: red;">{{ errorMessage }}<br></span>
+    <input type="submit" value="Obter Dragon">
+  </form>
+</div>
+
+<br><br>
+
+<h3>Informações Dragon</h3>
+<div>
+  <div>
+    <label for="id">Id: {{ dragon.id }}</label>
+  </div>
+  
+  <div>
+    <label for="nome">Nome: {{ dragon.name }}</label>
+  </div>
+  
+  <div>
+    <label for="tipo">Tipo: {{ dragon.type }}</label>
+  </div>
+  
+  <div>
+    <label for="descricao">Descrição: {{ dragon.description }}</label>
+  </div>  
+</div>
+
+
+<br><br><br>
+
+<app-dragons></app-dragons>
+
+<br><br><br>
+

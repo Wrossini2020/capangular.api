@@ -1,0 +1,25 @@
+<div>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+        </tr>
+
+        <tr *ngFor="let dragon of dragonList">
+            <td>
+                <a [routerLink]="['/']" [queryParams]="{id:dragon.id}">{{ dragon.id }}</a>
+            </td>
+            <td>
+                {{ dragon.name }}
+            </td>
+            <td>
+                {{ dragon.type }}
+            </td>
+            <td>
+                {{ dragon.description }}
+            </td>
+        </tr>
+    </table>
+</div>
